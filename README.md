@@ -96,12 +96,10 @@ python analysis.py
 
 ## 👤 Author
 
-**Aditya**  
+**Aditya Narayan**  
 B.Tech CSE | Siddharth Institute of Engineering and Technology, Tirupati  
-[LinkedIn](#) • [GitHub](#)
+[LinkedIn](https://www.linkedin.com/in/aditya-narayan-a174132a7/) • [GitHub](https://github.com/aditya801503)
 
 ---
 
-## 📝 License
 
-This project is open source and available under the [MIT License](LICENSE).
