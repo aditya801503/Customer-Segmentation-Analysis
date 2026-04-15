@@ -1,40 +1,107 @@
-# Superstore Sales Analysis using Python
-Superstore Sales Analysis using Python (Pandas, Matplotlib) with data cleaning and visualization.
-# Superstore Sales Data Analysis
+# 🛒 Superstore Sales Analysis
 
-## 📌 Overview
-This project performs Exploratory Data Analysis (EDA) on the Superstore Sales dataset to extract meaningful insights and visualize customer and sales patterns.
+A Python-based exploratory data analysis (EDA) project on the popular **Superstore Sales Dataset**, covering data cleaning, customer segmentation insights, and visualizations.
 
-## 🛠️ Technologies Used
-- Python
-- Pandas
-- Matplotlib
+---
 
-## 🔍 Key Features
-- Data Cleaning (handled missing values)
-- Postal Code correction
-- Analysis of sales data
-- Segment-wise customer distribution
-- City-wise analysis
+## 📁 Dataset
 
-## 📊 Visualizations
-- Bar chart showing customer segment distribution
+- **File:** `train.csv`
+- **Rows:** ~9,800
+- **Source:** [Kaggle - Sample Superstore Dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final)
 
-## 📷 Output
-(Add your Graph.png image here)
+### Columns Overview
+
+| Column | Description |
+|---|---|
+| Order ID | Unique identifier for each order |
+| Order Date / Ship Date | Order and shipping dates |
+| Ship Mode | Shipping category (First Class, Second Class, etc.) |
+| Customer ID / Name | Customer details |
+| Segment | Consumer, Corporate, Home Office |
+| Region / City / State | Geographic data (US-based) |
+| Category / Sub-Category | Product classification |
+| Product Name | Name of the product |
+| Sales | Revenue generated (target variable) |
+
+---
+
+## 🛠️ Requirements
+
+```bash
+pip install pandas matplotlib
+```
+
+---
 
 ## 🚀 How to Run
-1. Install required libraries: 'pip install pandas matplotlib'
-2. Run the script: 'python analysis.py'
 
+```bash
+python analysis.py
+```
 
-## 📈 Insights
-- Consumer segment has the highest number of customers
-- Corporate segment follows with moderate count
-- Home Office segment has the least customers
+> Make sure `train.csv` is in the same directory as `analysis.py`.
 
-## 👨‍💻 Author
-Aditya Narayan<img width="1470" height="956" alt="Graph" src="https://github.com/user-attachments/assets/da631bad-3149-4386-907a-79f918552ab2" />
+---
 
+## 📊 What the Script Does
 
+### 1. Data Loading & Inspection
+- Loads the dataset using `pandas`
+- Prints first 5 rows, column info, and null value counts
 
+### 2. Data Cleaning
+- Fills missing numeric values with **column mean**
+- Fills missing categorical values with **column mode**
+- Handles `Postal Code` separately using mode imputation
+
+### 3. Exploratory Analysis
+- **City-wise order count** — which cities have the most orders
+- **Segment-wise distribution** — Consumer vs Corporate vs Home Office
+
+### 4. Visualization
+- Left panel: **Bar Chart** — Customer Segment Distribution with value labels
+- Right panel: **Summary Table** — Count & Percentage per segment
+- Color-coded: 🟢 Consumer &nbsp;|&nbsp; 🔵 Corporate &nbsp;|&nbsp; 🟠 Home Office
+- Output saved as `segment_analysis.png`
+
+---
+
+## 📈 Output
+
+![Segment Distribution](segment_analysis.png)
+
+### Segment Summary
+
+| Segment | Count | Percentage |
+|---|---|---|
+| Consumer | 5101 | ~52% |
+| Corporate | 2953 | ~30% |
+| Home Office | 1746 | ~18% |
+
+> **Consumer** segment dominates with more than half of all orders.
+
+---
+
+## 📂 Project Structure
+
+```
+├── analysis.py            # Main analysis script
+├── train.csv              # Dataset (download from Kaggle)
+├── segment_analysis.png   # Output chart (auto-generated)
+└── README.md              # Project documentation
+```
+
+---
+
+## 👤 Author
+
+**Aditya**  
+B.Tech CSE | Siddharth Institute of Engineering and Technology, Tirupati  
+[LinkedIn](#) • [GitHub](#)
+
+---
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
